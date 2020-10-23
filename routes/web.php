@@ -33,10 +33,11 @@ Route::get('r2', function(){
     return view('welcome');
 });
 
-Route::get('hello/{name?}',function ($name='Everybody'){
-    return 'Hello, '.$name;
-});
 
 Route::get('test/{name?}',function ($name='body'){
     return 'Hell, '.$name;
 });
+
+Route::get('hello/{name?}', function ($name='Everybody') {
+    return 'Hello, '.$name;
+})->name('hello.index');
