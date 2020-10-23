@@ -25,7 +25,12 @@ Route::get('/', function () {
     return redirect('welcome');
 });
 
+
+
 Route::get('hello/{name?}',function ($name='Everybody'){
     return 'Hello, '.$name;
 });
 
+Route::get('test/{name?}',function ($name='body'){
+    return 'Hell, '.$name;
+});
